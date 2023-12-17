@@ -96,9 +96,16 @@ async function sendPushNotifications(snapTitle) {
     });
 }
 
+const external = process.env.RENDER_EXTERNAL_URL;
+if (external) {
+    let hostname = '0.0.0.0';
+    app.listen(httpPort, hostname, function () {
+        console.log(`HTTP listening on port: ${httpPort}`);
+    });
 
-
-app.listen(httpPort, function () {
-    console.log(`HTTP listening on port: ${httpPort}`);
-});
+} else {
+    app.listen(httpPort,  function () {
+        console.log(`HTTP listening on port: ${httpPort}`);
+    });
+}
 
