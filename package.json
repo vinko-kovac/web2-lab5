@@ -1,0 +1,19 @@
+{
+  "name": "web2-lab5",
+  "version": "1.0.0",
+  "description": "Peti projekt predmeta Web2",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon --inspect server.js",
+    "gen-vapid": "web-push generate-vapid-keys"
+  },
+  "author": "vkovac",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs-extra": "^10.0.0",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.22",
+    "web-push": "^3.4.5"
+  }
+}
